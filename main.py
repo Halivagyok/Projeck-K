@@ -10,8 +10,7 @@ titok_szo: str = input("abc elejére kerülő szó: ")
 
 
 abcList = list(titok_szo) + [chr(i) for i in range(97, 123) if chr(i) not in titok_szo]
-if len(plain) == len(kulcs_szo2):
-    print(1)
+
 
 big_list: list = []
 temp_list: list = abcList
@@ -19,10 +18,8 @@ big_list += temp_list
 
 for i in range(1, len(abcList)):
 
-    temp_str: str = temp_list[0]
-    temp_list.remove(temp_str)
-    temp_list += temp_str
-    big_list += temp_list
+    temp_list = temp_list[1:] + [temp_list[0]]
+    big_list.append(temp_list)
 
 
 
