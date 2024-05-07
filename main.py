@@ -14,7 +14,7 @@ abcList = list(titok_szo) + [chr(i) for i in range(97, 123) if chr(i) not in tit
 
 big_list: list = []
 temp_list: list = abcList
-big_list += temp_list
+big_list.append(temp_list)
 
 for i in range(1, len(abcList)):
 
